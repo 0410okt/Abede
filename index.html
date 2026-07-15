@@ -1,1 +1,172 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul (0410okt) | Minimal IT core</title>
+    <style>
+        /* --- RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace; /* Monospace wajib */
+        }
+
+        :root {
+            --bg: #0d1117; /* GitHub dark */
+            --card-bg: #161b22;
+            --accent: #58a6ff; /* Cyan blue core */
+            --text: #c9d1d9;
+            --subtext: #8b949e;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        /* --- AMBIENCE GLOW --- */
+        .glow {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(88, 166, 255, 0.1) 0%, rgba(13, 17, 23, 0) 70%);
+            border-radius: 50%;
+            top: 20%;
+            left: 20%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* --- COMPACT CORE CARD --- */
+        .minimal-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 25px;
+            max-width: 320px; /* Sangat sempit/ringkas */
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* NEW INTERESTING ELEMENT: Styled Terminal/Status Box */
+        .tech-core-box {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px auto;
+            border-radius: 8px;
+            background-color: #000;
+            border: 1px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--accent);
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+            position: relative;
+        }
+        
+        /* Simbol terminal berdenyut */
+        .tech-symbol {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.5; transform: scale(1); }
+        }
+
+        /* --- TYPOGRAPHY (Minimal) --- */
+        .username {
+            font-size: 0.8rem;
+            color: var(--accent);
+            opacity: 0.8;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .role {
+            font-size: 0.95rem;
+            color: var(--subtext);
+            margin-bottom: 25px;
+        }
+        .role::before { content: '['; color: var(--accent); opacity: 0.5; }
+        .role::after { content: ']'; color: var(--accent); opacity: 0.5; }
+
+        /* --- CONNECT BUTTON --- */
+        .btn-core {
+            display: inline-block;
+            background: none;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-core:hover {
+            background-color: rgba(88, 166, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.15);
+        }
+
+        /* --- TINY FOOTER --- */
+        .footer-mini {
+            margin-top: 20px;
+            font-size: 0.6rem;
+            color: var(--subtext);
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dekorasi Cahaya Latar Minimal -->
+    <div class="glow"></div>
+
+    <!-- MAIN COMPACT CARD -->
+    <div class="minimal-card">
+        
+        <!-- NEW TECH VISUAL (Ganti Foto) -->
+        <div class="tech-core-box">
+            <span class="tech-symbol">&gt;_</span>
+        </div>
+
+        <!-- Identitas Singkat -->
+        <span class="username">@0410okt</span>
+        <h1>Abdul</h1>
+        <p class="role"> IT / Dev core</p>
+
+        <!-- Tombol Satu-satunya -->
+        <a href="https://instagram.com/0410okt" target="_blank" class="btn-core">Connect_core</a>
+
+        <!-- Footer Ringkas -->
+        <div class="footer-mini">sys.sys.abdul v1.core &copy; 2026</div>
+
+    </div>
+
+</body>
+</html>
